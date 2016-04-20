@@ -53,6 +53,7 @@ def show_game_form():
 def show_madlib():
     """Show the final madlib."""
 
+    file_names = ["madlib.html", "madlib2.html", "madlib3.html"]
     game_name = request.args.get("input-person")
     game_color = request.args.get("color")
     game_noun = request.args.getlist("noun")
@@ -61,8 +62,9 @@ def show_madlib():
     game_noun2 = request.args.get("noun-two")
     game_adj2 = request.args.get("adj-two")
 
+    madlib_file = choice(file_names)
 
-    return render_template("madlib.html",
+    return render_template(madlib_file,
                             name=game_name,
                             color=game_color,
                             noun=game_noun,
