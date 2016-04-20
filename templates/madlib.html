@@ -5,6 +5,20 @@
 </head>
 <body>
     <b>Here is your madlib!</b><br>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ name }} went to pick it up, it burst into flames in a totally {{ adj }} way.
+    There once was a {{ color }}
+
+    {% if noun %}
+     
+    <ul>
+
+        {% for thing in noun %}
+            <li>{{ noun }}</li>
+        {% endfor %}
+
+    </ul>
+
+    {% endif %}
+    sitting in the Hackbright Lab. When {{ name }} went to pick it up, it burst into flames in a totally {{ adj }} way.
+    Thankfully, {{ name }} had a {{ color2 }} {{ noun2 }}. So never underestimate {{ adj2 }} {{ noun2}}!
 </body>
 </html>
