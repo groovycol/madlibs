@@ -55,16 +55,12 @@ def show_madlib():
 
     game_name = request.args.get("input-person")
     game_color = request.args.get("color")
-    game_noun = request.args.get("noun")
+    game_noun = request.args.getlist("noun")
     game_adj = request.args.get("adjective")
     game_color2 = request.args.get("color-two")
     game_noun2 = request.args.get("noun-two")
     game_adj2 = request.args.get("adj-two")
 
-    # if game_noun:
-    #     nouns = game_noun.split()
-    # else:
-    #     nouns = []
 
     return render_template("madlib.html",
                             name=game_name,

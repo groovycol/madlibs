@@ -1,0 +1,13 @@
+/*style.css*/
+
+p {
+    color: purple;
+    font-family: sans-serif;
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    color:green;
+    font-family: sans-serif;
+}
